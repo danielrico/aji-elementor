@@ -4,7 +4,7 @@
 add_theme_support( 'post-thumbnails' );
 // Image size for recettes list
 if ( function_exists( 'add_image_size' ) ) { 
-  add_image_size( 'gallery_thumb', 500);
+  add_image_size( 'gallery_thumb', 500, 500, true);
   add_image_size( 'gallery_large', '', 1100);
 }
 
@@ -34,9 +34,6 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-// logo
-add_theme_support( 'custom-logo' );
-add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
 // One column admin dashboard
 function wpse126301_dashboard_columns() {
